@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException, Query, status
 from models.ingredient import Restriction
 from services.menu_builder import MenuBuilder
 
-app = FastAPI(title="Restaurante Chapa Quente")
+app = FastAPI(title="Restaurante Carne de Cobra")
 menu_builder = MenuBuilder()
 
 
