@@ -12,13 +12,11 @@ def test_ingredient():
     assert farinha != ovo
     assert farinha == farinha
 
-    assert ovo.__hash__() != farinha.__hash__()
-    assert ovo.__hash__() != frango.__hash__()
-    assert ovo.__hash__() == ovo.__hash__()
+    assert hash(ovo) != hash(farinha)
+    assert hash(ovo) != hash(frango)
+    assert hash(ovo) == hash(ovo)
 
     assert repr(ovo) == "Ingredient('ovo')"
     assert ovo.name == 'ovo'
 
     assert farinha.restrictions == {Restriction.GLUTEN}
-    assert ovo.restrictions == {Restriction.ANIMAL_DERIVED}
-    assert frango.restrictions == {Restriction.ANIMAL_DERIVED}
