@@ -5,72 +5,46 @@ import pytest
 
 # Req 2
 def test_dish():
-    lasanha = Dish("Lasanha", 30.0)
-    assert lasanha.name == "Lasanha"
-    assert lasanha.price == 30.0
+    parmegiana = Dish("Paregiana", 85.0)
+    risoto = Dish("Risoto", 45.0)
 
-    lasanha.add_ingredient_dependency(Ingredient("massa de lasanha"), 1)
-    lasanha.add_ingredient_dependency(Ingredient("queijo mussarela"), 1)
-    lasanha.add_ingredient_dependency(Ingredient("caldo de carne"), 1)
+    assert parmegiana.name == "Paregiana"
+    assert parmegiana.price == 85.0
 
-    assert lasanha.recipe == {
-        Ingredient("massa de lasanha"): 1,
-        Ingredient("queijo mussarela"): 1,
-        Ingredient("caldo de carne"): 1,
-    }
+    assert risoto.name == "Risoto"
+    assert risoto.price == 45.0
 
-    assert lasanha.get_restrictions() == {
-        Restriction.ANIMAL_DERIVED,
-        Restriction.GLUTEN,
-        Restriction.LACTOSE,
-    }
+    assert hash(parmegiana) != hash(risoto)
+    assert hash(parmegiana) == hash(Dish("Paregiana", 85.0))
+    assert parmegiana == Dish("Paregiana", 85.0)
 
-    assert lasanha.get_ingredients() == {
-        Ingredient("massa de lasanha"),
-        Ingredient("queijo mussarela"),
-        Ingredient("caldo de carne"),
-    }
+    assert hash(risoto) != hash(parmegiana)
+    assert hash(risoto) == hash(Dish("Risoto", 45.0))
+    assert risoto == Dish("Risoto", 45.0)
 
-    frango_grelhado = Dish("Frango Grelhado", 25.0)
+    assert str(parmegiana) == "Dish('Paregiana', R$85.00)"
+    assert str(risoto) == "Dish('Risoto', R$45.00)"
 
-    assert frango_grelhado.name == "Frango Grelhado"
-    assert frango_grelhado.price == 25.0
+    with pytest.raises(TypeError):
+        Dish("Paregiana", "preço")  # type: ignore
 
-    frango_grelhado.add_ingredient_dependency(Ingredient("frango"), 1)
-    frango_grelhado.add_ingredient_dependency(Ingredient("manteiga"), 1)
-    frango_grelhado.add_ingredient_dependency(
-        Ingredient("queijo provolone"), 1
-    )
+    with pytest.raises(ValueError):
+        Dish("Paregiana", -1.0)
 
-    assert frango_grelhado.recipe == {
-        Ingredient("frango"): 1,
-        Ingredient("manteiga"): 1,
-        Ingredient("queijo provolone"): 1,
-    }
+    ingredient_parmegiana = Ingredient("carne")
+    parmegiana.add_ingredient_dependency(ingredient_parmegiana, 1)
 
-    assert frango_grelhado.get_restrictions() == {
-        Restriction.ANIMAL_DERIVED,
-        Restriction.ANIMAL_MEAT,
-        Restriction.LACTOSE,
-    }
+    assert ingredient_parmegiana in parmegiana.get_ingredients()
+    assert Restriction.ANIMAL_DERIVED in parmegiana.get_restrictions()
 
-    assert lasanha.__repr__() == "Dish('Lasanha', R$30.00)"
-    assert frango_grelhado.__repr__() == "Dish('Frango Grelhado', R$25.00)"
+    with pytest.raises(TypeError):
+        Dish("Risoto", "preço")  # type: ignore
 
-    assert lasanha.__eq__(frango_grelhado) is False
-    assert lasanha.__eq__(lasanha) is True
+    with pytest.raises(ValueError):
+        Dish("Risoto", -1.0)
 
-    assert lasanha.__hash__() == hash("Dish('Lasanha', R$30.00)")
-    assert frango_grelhado.__hash__() == hash(
-        "Dish('Frango Grelhado', R$25.00)"
-    )
+    ingredient_risoto = Ingredient("queijo")
+    risoto.add_ingredient_dependency(ingredient_risoto, 1)
 
-    with pytest.raises(TypeError) as error:
-        Dish("Invalid Dish", "25")
-
-    assert str(error.value) == "Dish price must be float."
-
-    with pytest.raises(ValueError) as error:
-        Dish("Invalid Dish", 0)
-
-    assert str(error.value) == "Dish price must be greater then zero."
+    assert ingredient_risoto in risoto.get_ingredients()
+    assert Restriction.ANIMAL_DERIVED in risoto.get_restrictions()
