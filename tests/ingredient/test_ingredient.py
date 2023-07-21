@@ -21,3 +21,5 @@ def test_ingredient():
     assert ovo.name == 'ovo'
 
     assert farinha.restrictions == {Restriction.GLUTEN}
+    assert ovo.restrictions == {Restriction.ANIMAL_DERIVED}
+    assert frango.restrictions == {Restriction.ANIMAL_DERIVED}
