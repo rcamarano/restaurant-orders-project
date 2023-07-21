@@ -6,9 +6,8 @@ from src.models.ingredient import (
 
 # Req 1
 def test_ingredient():
-    frango = Ingredient('frango')
-    ovo = Ingredient('ovo')
-    farinha = Ingredient('farinha')
+    ingredients = ['frango', 'ovo', 'farinha']
+    frango, ovo, farinha = [Ingredient(name) for name in ingredients]
 
     assert farinha != ovo
     assert farinha == farinha
