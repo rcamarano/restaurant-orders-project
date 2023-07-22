@@ -1,4 +1,4 @@
-# 🚀🧠 Restaurant Orders Project 🧠🚀
+# 🚀🥧🍚🍖 Restaurant Orders Project 🥧🍚🍖🚀
 
 >>> "Nesse projeto o desafio foi finalizar uma ferramenta de construção de cardápios. O restaurante necessita desta ferramenta para que possa, de maneira simples, gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em estoque. Hoje, a gestão das receitas e de estoque do restaurante acontece de forma muito ineficiente através de arquivos csv e, por essa razão, as pessoas fundadoras do estabelecimento desejam melhorar esta gestão.
 
