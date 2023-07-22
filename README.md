@@ -1,14 +1,7 @@
 # 🚀🥧🍚🍖 Restaurant Orders Project 🥧🍚🍖🚀
 
->>> "Nesse projeto o desafio foi finalizar uma ferramenta de construção de cardápios. O restaurante necessita desta ferramenta para que possa, de maneira simples, gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em estoque. Hoje, a gestão das receitas e de estoque do restaurante acontece de forma muito ineficiente através de arquivos csv e, por essa razão, as pessoas fundadoras do estabelecimento desejam melhorar esta gestão.
+>>>"Nesse projeto o desafio foi finalizar uma ferramenta de construção de cardápios. O restaurante necessita desta ferramenta para que possa, de maneira simples, gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em estoque. Hoje, a gestão das receitas e de estoque do restaurante acontece de forma muito ineficiente através de arquivos csv e, por essa razão, as pessoas fundadoras do estabelecimento desejam melhorar esta gestão."
 
-Já existia estrutura inicial para finalizar essa construção. Assim, ao longo deste projeto foi necessário construir testes para classes já implementadas, implementará uma nova classe para mapear os pratos e suas respectivas receitas (ingredientes e quantidades), também implementar uma classe que gerará os cardápios que devem ser mostrados para as pessoas que frequentam o estabelecimento e outra que fará a gestão de estoque dos ingredientes.
-
-🚵 Habilidades exercitadas:
-
-    Praticar o conceito de Hashmaps através das estruturas de dados Dict e Set do Python;
-    Praticar os conhecimentos de testes de software;
-    Praticar os conhecimentos de orientação a objetos. "
 >>> Um projeto muito interessante e desafiador. Durante a execução pude desenvolver mais minhas habilidades de gestão do tempo, inteligência emocional, pensamento crítico e controle de ansiedade.
 >>> Além, é claro de praticar mais um pocuo os conhecimentos em estrutura de dados relacionais e executar os passos que o projeto precisava. Utilizando muita lógica de programaçnao para praticar os conhecimentos em Python e desenvolver cada vez mais nessa linguagem.
 
@@ -28,14 +21,14 @@ Obrigado por sua visita.!
 
 ## Descrição
 
-"Nesse projeto o desafio foi implementar um programa que simule um algoritmo de indexação de documentos similar ao do Google. O programa deverá ser capaz de identificar ocorrências de termos em arquivos TXT.
-🚵 Habilidades exercitadas:
-Lógica;
-Manipular Pilhas;
-Manipular Deque;
-Manipular Nó & Listas Ligadas e;
-Manipular Listas Duplamente Ligadas."
+"Nesse projeto o desafio foi finalizar uma ferramenta de construção de cardápios. O restaurante necessita desta ferramenta para que possa, de maneira simples, gerar seus cardápios considerando possíveis restrições alimentares e também a disponibilidade dos ingredientes em estoque. Hoje, a gestão das receitas e de estoque do restaurante acontece de forma muito ineficiente através de arquivos csv e, por essa razão, as pessoas fundadoras do estabelecimento desejam melhorar esta gestão.
 
+Já existia estrutura inicial para finalizar essa construção. Assim, ao longo deste projeto foi necessário construir testes para classes já implementadas, implementará uma nova classe para mapear os pratos e suas respectivas receitas (ingredientes e quantidades), também implementar uma classe que gerará os cardápios que devem ser mostrados para as pessoas que frequentam o estabelecimento e outra que fará a gestão de estoque dos ingredientes.
+
+🚵 Habilidades exercitadas:
+    Praticar o conceito de Hashmaps através das estruturas de dados Dict e Set do Python;
+    Praticar os conhecimentos de testes de software;
+    Praticar os conhecimentos de orientação a objetos.
 ## Tecnologias
 
 - [Node.js](https://nodejs.org/en/)
